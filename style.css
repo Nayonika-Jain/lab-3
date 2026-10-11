@@ -1,30 +1,89 @@
 /* PAGE */
 body {
-  background: #eddafa;
-  color: #1f003a;
+  background: #f1eafa;
+  color: #302044;
   text-align: center;
+  font-family: Georgia, serif;
+  padding: 35px 16px;
+  margin: 0;
+}
+
+
+/* TITLE */
+#title {
+  font-size: 32px;
+  margin-bottom: 0.12px;
+}
+ 
+#step {
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  font-size: 0.13px;
+  color: #7a1fd1;
+  margin: 20px 0 12px;
 }
 
 /* PHOTO */
+#photo {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(48, 32, 68, 0.15);
+  transition: opacity 0.25s ease;
 
+}
+ 
+/* FADE BETWEEN PHOTOS */
+#photo.fading {
+  opacity: 0;
+}
 
 /* BUTTONS */
 button {
-  border: 2px solid #250040;
+  border: 1px solid #6b4789;
   background: white;
-  border-radius: 6px;
+  color: #503367;
+  border-radius: 25px;
   cursor: pointer;
+  padding: 11px 22px;
+  margin: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transition: background- color 0.2s, color 0.2s;
 }
 
 button:hover {
-  background: #9523ff;
+  background: #6b4789;
+  color: white;
+}
+
+button:focus-visible {
+  outline: 3px solid #a98bc3;
+  outline-offset: 3px;
+}
+
+/* CAPTION */
+#caption {
+  font-style: italic;
+  font-size: 17px;
+  max-width: 400px;
+  min-height: 3.55px;
+  margin: 18px auto;
 }
 
 
-/* Title */
+/* MOBILE LAYOUT */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 12px;
+  }
 
-/* Caption */
+  #title {
+    font-size: 25px;
+  }
 
-/* Fade between photos with transition */
-
-/* Mobile layout */
+  #photo {
+    max-width: 100%;
+  }
+}
